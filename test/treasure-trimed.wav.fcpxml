@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+
+<!-- DJ-beat @2019 Kevin T. Lee - Build Version: 0.1 -->
+<!-- Build Date Time: 2019-03-11 11:09 -->
+
+<fcpxml version="1.6">
+<resources>
+<format id='k1' name='FFVideoFormat1080p30' frameDuration='1/30s'/>
+<asset id="k2" name="treasure-trimed" src="file:/Users/kevin/Projects/GitHub/dj-beat/test/treasure-trimed.wav" start='0/1000s' duration='5476/1000s' hasAudio="1" audioSources="1" audioRate="22050">
+</asset>
+</resources>
+<library>
+<event name="treasure-trimed Event">
+<project name="treasure-trimed Project">
+<sequence duration='5000/1000s' format="k1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+<spine>
+<asset-clip name='treasure-trimed' lane='0' offset='0/1000s' ref='k2' duration='5000/1000s' audioRole='Music'>
+<marker start='7/30s' duration='1/48000s' value='beat_at_0.25'  completed='0'/>
+<marker start='23/30s' duration='1/48000s' value='beat_at_0.77'  completed='0'/>
+<marker start='38/30s' duration='1/48000s' value='beat_at_1.28'  completed='0'/>
+<marker start='54/30s' duration='1/48000s' value='beat_at_1.8'  completed='0'/>
+<marker start='69/30s' duration='1/48000s' value='beat_at_2.32'  completed='0'/>
+<marker start='85/30s' duration='1/48000s' value='beat_at_2.84'  completed='0'/>
+<marker start='100/30s' duration='1/48000s' value='beat_at_3.35'  completed='0'/>
+<marker start='116/30s' duration='1/48000s' value='beat_at_3.87'  completed='0'/>
+<marker start='131/30s' duration='1/48000s' value='beat_at_4.39'  completed='0'/>
+<marker start='147/30s' duration='1/48000s' value='beat_at_4.91'  completed='0'/>
+<marker start='162/30s' duration='1/48000s' value='beat_at_5.42'  completed='0'/>
+
+<audio-channel-source role='music.music-1' srcCh='1, 2'/>
+</asset-clip>
+
+</spine>
+</sequence>
+</project>
+</event>
+</library>
+</fcpxml>

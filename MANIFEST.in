@@ -1,0 +1,3 @@
+include README.md
+include djbeat/template.xml
+include djbeat/requirements.txt

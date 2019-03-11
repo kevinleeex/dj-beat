@@ -30,9 +30,49 @@ Learn more about **beat tracking**:
 
 ## Installation
 
-[TO-DO]
+### Requirements
+numpy==1.14.3
+madmom==0.16.1
+tqdm==4.31.1
+librosa==0.6.3
+
+### Use pip (Recommended)
+
+```bash
+pip install dj-beat
+```
+
+### Locally
+1. Git clone
+   ```bash
+   git clone 
+   ```
+
+```bash
+cd ./src
+pip install -r requirements.txt
+```
 
 ## Usage
+
+### Command-Line Tool
+
+```bash
+cd src
+python djbeat.py -f ../test/treasure-sample.mp3 -r 30
+```
+
+### Arguments
+
+```
+-h, --help           show this help message and exit.
+-p, --platform       The platform, fcpx or pre, default='fcpx'.
+-f, --filepath       The filepath of the input audio.
+-s, --fps FPS        The sample rate of the music, a integer number, default='100'.
+-r, --frame_rate     The frame rate of your video setting, choose from {23.98,24,25,29.97,30,50,60}, default='30'.
+```
+
+### Graphic User Interface
 
 [TO-DO]
 
@@ -45,8 +85,10 @@ Or click <a href="http://lidengju.com/donate">Donete me</a> with Wechat or Alipa
 
 ## TO-DO
 
+- [ ] Distributio
 - [ ] Support the GUI
 - [ ] Support generate marks for PRE
+
 
 ## License
 
