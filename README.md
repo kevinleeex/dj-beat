@@ -88,7 +88,7 @@ Or click <a href="http://lidengju.com/donate">Donete me</a> with Wechat or Alipa
 
 ## TO-DO
 
-- [ ] Distributio
+- [x] Distribution
 - [ ] Support the GUI
 - [ ] Support generate marks for PRE
 
