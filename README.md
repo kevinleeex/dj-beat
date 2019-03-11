@@ -15,7 +15,7 @@ Dj-beat is an easy-to-use generator that automatically detects audio beats and g
 
 > P.S. why the tool is called DJ beat? DJ is from my chinese first name of course...
 
-## Overview
+## :headphones: Overview
 
 A good music-driven video requires a perfect combination of sound and picture. Think about you're using the video editing software like Final Cut Pro X, you need to manually mark the place on the soundtrack that denotes the beat. Now, you have the **DJ-beat**, which can help you handle such a boring thing, mark, mark, mark...While it may do better than us. 
 
@@ -27,8 +27,11 @@ Learn more about **beat tracking**:
 
 - for English readers click [here](https://www.analyticsvidhya.com/blog/2018/02/audio-beat-tracking-for-music-information-retrieval/).
 
+### Preview
 
-## Installation
+![preview](./assets/preview.png)
+
+## :beer: Installation
 
 ### Requirements
 numpy==1.14.3  
@@ -57,7 +60,7 @@ $ pip setup.py install
 
 
 
-## Usage
+## :star2: Usage
 
 ### Command-Line Tool
 
@@ -79,21 +82,21 @@ $ djbeat -f ./test/treasure-trimed.wav -r 30
 
 [TO-DO]
 
-## Support me
+## :heart: Support me
 
 If this project helps you, you can support me to do better.  
 <a href="https://paypal.me/kevinleeex"><img alt="Coffee" src="https://img.shields.io/badge/PayPal_me_a-Coffee-7A501E.svg?longCache=true&style=for-the-badge"></a>
 
 Or click <a href="http://lidengju.com/donate">Donete me</a> with Wechat or Alipay
 
-## TO-DO
+## :zzz: TO-DO
 
 - [x] Distribution
 - [ ] Support the GUI
 - [ ] Support generate marks for PRE
 
 
-## License
+## :paperclip: License
 
 Copyright © 2018 [Kevin T. Lee](http://lidengju.com). All rights reserved. 
 
