@@ -31,10 +31,15 @@ Learn more about **beat tracking**:
 ## Installation
 
 ### Requirements
-numpy==1.14.3
-madmom==0.16.1
-tqdm==4.31.1
-librosa==0.6.3
+numpy==1.14.3  
+madmom==0.16.1  
+tqdm==4.31.1  
+librosa==0.6.3  
+
+```bash
+cd ./src
+pip install -r requirements.txt
+```
 
 ### Use pip (Recommended)
 
@@ -43,26 +48,24 @@ pip install dj-beat
 ```
 
 ### Locally
-1. Git clone
-   ```bash
-   git clone 
-   ```
 
 ```bash
-cd ./src
-pip install -r requirements.txt
+$ git clone https://github.com/kevinleeex/dj-beat.git
+$ cd dj-beat
+$ pip setup.py install
 ```
+
+
 
 ## Usage
 
 ### Command-Line Tool
 
 ```bash
-cd src
-python djbeat.py -f ../test/treasure-sample.mp3 -r 30
+$ djbeat -f ./test/treasure-trimed.wav -r 30
 ```
 
-### Arguments
+#### Arguments
 
 ```
 -h, --help           show this help message and exit.
