@@ -19,7 +19,7 @@ Dj-beat is an easy-to-use generator that automatically detects audio beats and g
 
 A good music-driven video requires a perfect combination of sound and picture. Think about you're using the video editing software like Final Cut Pro X, you need to manually mark the place on the soundtrack that denotes the beat. Now, you have the **DJ-beat**, which can help you handle such a boring thing, mark, mark, mark...While it may do better than us. 
 
-Dj-beat is a simple tool developed based on python3 and madmom library, supports operating via command line and graphical interface*. The principle of the tool is the music beat tracking, then the tool output the XML file, which the FCPX and PRE can read.
+Dj-beat is a simple tool developed based on python3 and madmom library, supports operating via command line and graphical interface*. The principle of the tool is the music beat tracking (based on multi-LSTM models and Dynamic Bayesian Network), then the tool output the XML file, which the FCPX and PRE can read.
 
 Learn more about **beat tracking**:
 
