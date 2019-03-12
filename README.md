@@ -23,7 +23,7 @@ Dj-beat is a simple tool developed based on python3 and madmom library, supports
 
 Learn more about **beat tracking**:
 
-- for Chinese readers click [here](./post). 
+- for Chinese readers click [here](https://github.com/kevinleeex/dj-beat/blob/master/post/beat_tracking_in_mir.ipynb). 
 
 - for English readers click [here](https://www.analyticsvidhya.com/blog/2018/02/audio-beat-tracking-for-music-information-retrieval/).
 
