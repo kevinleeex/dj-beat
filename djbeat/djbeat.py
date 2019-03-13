@@ -100,6 +100,7 @@ def main():
     f = Figlet(font='slant')
     print(f.renderText('DJ-Beat'))
     print('Author: Kevin T. Lee')
+    print('Email: hello@lidengju.com')
     parser = argparse.ArgumentParser(
         description='DJ-beat, automatically mark the beat of your music for FCPX and PRE.')
 
