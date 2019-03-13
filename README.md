@@ -34,7 +34,10 @@ Learn more about **beat tracking**:
 ## :beer: Installation
 
 ### Requirements
-numpy==1.14.3  
+Cython==0.29.6
+numpy==1.14.3
+> You may need to install the above two libs before you install the dj-beat.
+
 madmom==0.16.1  
 tqdm==4.31.1  
 librosa==0.6.3  

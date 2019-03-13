@@ -15,14 +15,15 @@ setup(
     entry_points={
         "console_scripts": ['djbeat = djbeat.djbeat:main']
     },
-    version='0.1',
+    version='0.4',
     description="A simple CLI tool for generating beat marks of music for FCPX and PRE",
     license="MIT",
     install_requires=[
+        'Cython',
+        'numpy',
         'tqdm',
         'madmom',
         'librosa',
-        'numpy',
         'pyfiglet'
     ],
     long_description=long_descr,

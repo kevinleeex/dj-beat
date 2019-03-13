@@ -101,11 +101,12 @@ def main():
     print(f.renderText('DJ-Beat'))
     print('Author: Kevin T. Lee')
     print('Email: hello@lidengju.com')
+    print('Github: https://github.com/kevinleeex/dj-beat')
     parser = argparse.ArgumentParser(
         description='DJ-beat, automatically mark the beat of your music for FCPX and PRE.')
 
     parser.add_argument('-f', '--filepath', type=str,
-                        help='The filepath of the input audio', required=True)
+                        help='The filepath of the input audio, support wav and mp3.', required=True)
     parser.add_argument('-r', '--frame_rate', default='30', choices=['23.98', '24', '25', '29.97', '30', '50', '60'],
                         help='The frame rate of your video setting.', required=True)
     parser.add_argument('-s', '--fps', default=100, type=int,
