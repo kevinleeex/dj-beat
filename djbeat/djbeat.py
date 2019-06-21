@@ -2,7 +2,7 @@
 # author: Kevin T. Lee<hello@lidengju.com>
 # description: DJ-beat is available to detect the beat from the audio and generate time marks for FCPX and premiere.
 
-__version__ = '0.1'
+__version__ = '0.4.6'
 
 import madmom
 import librosa
@@ -21,7 +21,7 @@ class DJbeat(object):
     # supported format list
     ext_list = ['mp3', 'wav']
 
-    def __init__(self, filepath, fps=100, frame_rate=30):
+    def __init__(self, filepath, fps=100, frame_rate=30, show_time=False):
         if not os.path.exists(filepath):
             raise Exception('The file {} not exists!'.format(filepath))
 
@@ -39,6 +39,8 @@ class DJbeat(object):
 
         self.fps = fps
         self.frame_rate = frame_rate
+
+        self.show_time = show_time
 
         self.build_version = __version__
         now = datetime.datetime.now()
@@ -94,7 +96,8 @@ class DJbeat(object):
 
         with open(dst_filename, 'w') as out_f:
             out_f.write(result)
-        print('Beat time list (s): {}'.format(', '.join(real_time_list)))
+        if self.show_time:
+            print('Beat time list (s): {}'.format(', '.join(real_time_list)))
         print('[Complete!]')
 
 
@@ -107,21 +110,30 @@ def main():
     print('Github: https://github.com/kevinleeex/dj-beat')
     parser = argparse.ArgumentParser(
         description='DJ-beat, automatically mark the beat of your music for FCPX and PRE.')
-
-    parser.add_argument('-f', '--filepath', type=str,
-                        help='The filepath of the input audio, support wav and mp3.', required=True)
+    parser.add_argument('-f', '--filepath', default='', type=str,
+                        help='The filepath of the input audio, support wav and mp3.')
     parser.add_argument('-r', '--frame_rate', default='30', choices=['23.98', '24', '25', '29.97', '30', '50', '60'],
-                        help='The frame rate of your video setting.', required=False)
+                        help='The frame rate of your video setting.')
     parser.add_argument('-s', '--fps', default=100, type=int,
-                        help='The sample rate of the music, a integer number.', required=False)
+                        help='The sample rate of the music, a integer number.')
     parser.add_argument('-p', '--platform', default='fcpx', type=str, choices=['fcpx', 'pre'],
-                        help='The platform, fcpx or pre', required=False)
+                        help='The platform, fcpx or pre')
+    
+    parser.add_argument('-V', help='to show the beat time list in terminal', action='store_true')
+    parser.add_argument('-v', help='to show the version', action='store_true')
 
     args = vars(parser.parse_args())
 
     filepath = args['filepath']
     fps = args['fps']
     frame_rate = args['frame_rate']
+    show_time = False
 
-    _djbeat = DJbeat(filepath, fps, frame_rate)
-    _djbeat.gen_fcpxml()
+    if args['V']:
+        show_time = True
+    if args['v']:
+        print('DJ-Beat Version: ', __version__)
+
+    if filepath != '':
+        _djbeat = DJbeat(filepath, fps, frame_rate, show_time)
+        _djbeat.gen_fcpxml()
