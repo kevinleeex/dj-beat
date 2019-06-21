@@ -2,20 +2,20 @@
 <!DOCTYPE fcpxml>
 
 <!-- DJ-beat @2019 Kevin T. Lee - Build Version: 0.4.6 -->
-<!-- Build Date Time: 2019-06-23 11:57 -->
+<!-- Build Date Time: 2019-06-23 12:04 -->
 
 <fcpxml version="1.6">
 <resources>
 <format id='k1' name='FFVideoFormat1080p30' frameDuration='1/30s'/>
-<asset id="k2" name="treasure-trimed" src="file:b'/Users/kevin/Projects/GitHub/dj-beat/test/treasure-trimed.wav'" start='0/1000s' duration='5476/1000s' hasAudio="1" audioSources="1" audioRate="22050">
+<asset id="k2" name="中文 测试" src="file:/Users/kevin/Projects/GitHub/dj-beat/test/%E4%B8%AD%E6%96%87%20%E6%B5%8B%E8%AF%95.wav" start='0/1000s' duration='5476/1000s' hasAudio="1" audioSources="1" audioRate="22050">
 </asset>
 </resources>
 <library>
-<event name="treasure-trimed Event">
-<project name="treasure-trimed Project">
+<event name="中文 测试 Event">
+<project name="中文 测试 Project">
 <sequence duration='5000/1000s' format="k1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
 <spine>
-<asset-clip name='treasure-trimed' lane='0' offset='0/1000s' ref='k2' duration='5000/1000s' audioRole='Music'>
+<asset-clip name='中文 测试' lane='0' offset='0/1000s' ref='k2' duration='5000/1000s' audioRole='Music'>
 <marker start='7/30s' duration='1/48000s' value='beat_at_0.25'  completed='0'/>
 <marker start='23/30s' duration='1/48000s' value='beat_at_0.77'  completed='0'/>
 <marker start='38/30s' duration='1/48000s' value='beat_at_1.28'  completed='0'/>

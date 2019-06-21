@@ -1,12 +1,12 @@
 
-<div align="center"><img style="display:inline-block" width='150' src="./assets/DJbeat-logo.png"/><p>
+<div align="center"><img style="display:inline-block" width='150' src="./assets/logo.png"/><p>
     <span style="font-size: 14px">Version: 0.4.6</span><br>
     <span>"A Simple Beat Time Marks Generator"</span><br>
     <span style="font-size: 12px;color= #95dafc">-- Created by <a>Kevin T. Lee</a> --</span>
     </p>
     <a href="./LICENSE"><img alt="MIT" src="https://img.shields.io/github/license/mashape/apistatus.svg?&url=LICENSE&longCache=true&style=for-the-badge"></a>
         <a href="http://lidengju.com"><img alt="Code" src="https://img.shields.io/badge/Code%20with-Love-red.svg?longCache=true&style=for-the-badge"></a>
-    <a href="https://github.com/kevinleeex/dj-beat/"><img alt="Version" src="https://img.shields.io/badge/Version-0.4.1-blue.svg?longCache=true&style=for-the-badge"></a>
+    <a href="https://github.com/kevinleeex/dj-beat/"><img alt="Version" src="https://img.shields.io/badge/Version-0.4.6-blue.svg?longCache=true&style=for-the-badge"></a>
 </div>
 
 # DJ-beat
@@ -73,7 +73,9 @@ $ djbeat -f ./test/treasure-trimed.wav -r 30
 #### Arguments
 
 ```
--h, --help           show this help message and exit.
+-h, --help           Display this help message and exit.
+-v,                  Display the version.
+-V,                  Display the beat time list in terminal.
 -p, --platform       The platform, fcpx or pre, default='fcpx'.
 -f, --filepath       The filepath of the input audio.
 -s, --fps FPS        The sample rate of the music, a integer number, default='100'.
