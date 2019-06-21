@@ -1,6 +1,6 @@
 
 <div align="center"><img style="display:inline-block" width='150' src="./assets/DJbeat-logo.png"/><p>
-    <span style="font-size: 14px">Version: 0.4.1</span><br>
+    <span style="font-size: 14px">Version: 0.4.6</span><br>
     <span>"A Simple Beat Time Marks Generator"</span><br>
     <span style="font-size: 12px;color= #95dafc">-- Created by <a>Kevin T. Lee</a> --</span>
     </p>
