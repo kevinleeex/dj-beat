@@ -31,8 +31,7 @@ Learn more about **beat tracking**:
 
 ![preview](./assets/preview.png)
 
-## :beer: Installation
-
+## :beer: Installation 
 ### Requirements
 Cython==0.29.6  
 numpy==1.14.3
@@ -49,7 +48,8 @@ pip install -r requirements.txt
 ```
 
 ### Use pip (Recommended)
-
+> make sure you have add your virtual environment **bin** path to the PATH, thus to use the command line tool.
+ 
 ```bash
 pip install dj-beat
 ```
