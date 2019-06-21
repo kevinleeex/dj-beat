@@ -61,6 +61,7 @@ class DJbeat(object):
     def gen_fcpxml(self):
         beat_times = self.proc_data()
         markers = []
+        real_time_list = []
         print('[Start write beat markers]')
         for item in tqdm(beat_times):
             real_time = item
@@ -68,6 +69,7 @@ class DJbeat(object):
             _mark = "<marker start='{round_time}/{frame_rate}s' duration='1/48000s' value='beat_at_{real_time}'  completed='0'/>".format(
                 round_time=round_time, frame_rate=self.frame_rate, real_time=real_time)
             markers.append(_mark)
+            real_time_list.append(str(real_time))
 
         self.beat_marks = '\n'.join(markers)
         
@@ -92,6 +94,7 @@ class DJbeat(object):
 
         with open(dst_filename, 'w') as out_f:
             out_f.write(result)
+        print('Beat time list (s): {}'.format(', '.join(real_time_list)))
         print('[Complete!]')
 
 

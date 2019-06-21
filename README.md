@@ -1,12 +1,12 @@
 
 <div align="center"><img style="display:inline-block" width='150' src="./assets/DJbeat-logo.png"/><p>
-    <span style="font-size: 14px">Version: 0.1</span><br>
+    <span style="font-size: 14px">Version: 0.4.1</span><br>
     <span>"A Simple Beat Time Marks Generator"</span><br>
     <span style="font-size: 12px;color= #95dafc">-- Created by <a>Kevin T. Lee</a> --</span>
     </p>
     <a href="./LICENSE"><img alt="MIT" src="https://img.shields.io/github/license/mashape/apistatus.svg?&url=LICENSE&longCache=true&style=for-the-badge"></a>
         <a href="http://lidengju.com"><img alt="Code" src="https://img.shields.io/badge/Code%20with-Love-red.svg?longCache=true&style=for-the-badge"></a>
-    <a href="https://github.com/kevinleeex/dj-beat/"><img alt="Version" src="https://img.shields.io/badge/Version-0.1-blue.svg?longCache=true&style=for-the-badge"></a>
+    <a href="https://github.com/kevinleeex/dj-beat/"><img alt="Version" src="https://img.shields.io/badge/Version-0.4.1-blue.svg?longCache=true&style=for-the-badge"></a>
 </div>
 
 # DJ-beat
@@ -34,7 +34,7 @@ Learn more about **beat tracking**:
 ## :beer: Installation
 
 ### Requirements
-Cython==0.29.6
+Cython==0.29.6  
 numpy==1.14.3
 > You may need to install the above two libs before you install the dj-beat.
 
@@ -43,7 +43,8 @@ tqdm==4.31.1
 librosa==0.6.3  
 
 ```bash
-cd ./src
+cd ./djbeat
+pip install -r bases.txt  
 pip install -r requirements.txt
 ```
 
@@ -60,8 +61,6 @@ $ git clone https://github.com/kevinleeex/dj-beat.git
 $ cd dj-beat
 $ pip setup.py install
 ```
-
-
 
 ## :star2: Usage
 

@@ -15,7 +15,7 @@ setup(
     entry_points={
         "console_scripts": ['djbeat = djbeat.djbeat:main']
     },
-    version='0.4',
+    version='0.4.3',
     description="A simple CLI tool for generating beat marks of music for FCPX and PRE",
     license="MIT",
     install_requires=[
@@ -26,7 +26,7 @@ setup(
         'librosa',
         'pyfiglet'
     ],
-    long_description=long_descr,
+    # long_description=long_descr,
     include_package_data=True,
     author="Kevin T. Lee",
     author_email="hello@lidengju.com",
