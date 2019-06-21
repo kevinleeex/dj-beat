@@ -111,7 +111,7 @@ def main():
     parser.add_argument('-f', '--filepath', type=str,
                         help='The filepath of the input audio, support wav and mp3.', required=True)
     parser.add_argument('-r', '--frame_rate', default='30', choices=['23.98', '24', '25', '29.97', '30', '50', '60'],
-                        help='The frame rate of your video setting.', required=True)
+                        help='The frame rate of your video setting.', required=False)
     parser.add_argument('-s', '--fps', default=100, type=int,
                         help='The sample rate of the music, a integer number.', required=False)
     parser.add_argument('-p', '--platform', default='fcpx', type=str, choices=['fcpx', 'pre'],
