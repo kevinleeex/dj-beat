@@ -2,7 +2,7 @@
 # author: Kevin T. Lee<hello@lidengju.com>
 # description: DJ-beat is available to detect the beat from the audio and generate time marks for FCPX and premiere.
 
-__version__ = '0.4.7'
+__version__ = '0.4.9'
 
 import madmom
 import librosa
@@ -11,6 +11,7 @@ import sys
 import os
 import datetime
 import numpy as np
+import re
 from tqdm import tqdm
 from pyfiglet import Figlet
 from string import Template
@@ -54,7 +55,7 @@ class DJbeat(object):
         self.file_time = (1.0 * len(self.y) / self.audio_sr)
         self.file_real_length = int(self.file_time * 1000)
         self.file_length = int(self.file_time) * 1000
-        proc = madmom.features.beats.DBNBeatTrackingProcessor(fps=self.fps)
+        proc = madmom.features.beats.DBNBeatTrackingProcessor(look_ahead=0.4, fps=self.fps)
         act = madmom.features.beats.RNNBeatProcessor()(self.filepath)
 
         beat_times = proc(act)
@@ -76,10 +77,11 @@ class DJbeat(object):
 
         self.beat_marks = '\n'.join(markers)
         
+        new_file_name = re.sub(r'\W','_',self.file_name)
         _dict = {'build_version': self.build_version,
                  'date_time': self.date_time,
                  'frame_rate': self.frame_rate,
-                 'file_name': self.file_name,
+                 'file_name': new_file_name,
                  'file_path': pathname2url(self.abs_filepath),
                  'file_length': self.file_length,
                  'file_real_length': self.file_real_length,

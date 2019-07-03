@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+
+<fcpxml version="1.8">
+    <resources>
+        <format id="r1" name="FFVideoFormat1080p30" frameDuration="100/3000s" width="1920" height="1080" colorSpace="1-1-1 (Rec. 709)"/>
+        <asset id="r2" name="中文 测试&quot;" uid="F554540157F2DDDD141252517F34AA6E" src="file:///Users/kevin/Projects/GitHub/dj-beat/test/%E4%B8%AD%E6%96%87%20%E6%B5%8B%E8%AF%95%22.wav" start="0s" duration="241531/44100s" hasAudio="1" audioSources="1" audioChannels="2" audioRate="44100">
+            <bookmark>Ym9vazQDAAAAAAQQMAAAAGmRsqvaJ4K/qcAGPjgdMvst076Mb9cX1iFox0ENEVbpMAIAAAQAAAADAwAAABgAKAUAAAABAQAAVXNlcnMAAAAFAAAAAQEAAGtldmluAAAACAAAAAEBAABQcm9qZWN0cwYAAAABAQAAR2l0SHViAAAHAAAAAQEAAGRqLWJlYXQABAAAAAEBAAB0ZXN0EgAAAAEBAADkuK3mlocg5rWL6K+VIi53YXYAABwAAAABBgAAEAAAACAAAAAwAAAAQAAAAFAAAABgAAAAbAAAAAgAAAAEAwAAo2cGAAAAAAAIAAAABAMAALWlCQAAAAAACAAAAAQDAAA22xoAAQAAAAgAAAAEAwAAEU1VAQEAAAAIAAAABAMAANShRAIBAAAACAAAAAQDAADUokQCAQAAAAgAAAAEAwAAoEa8AgEAAAAcAAAAAQYAAKwAAAC8AAAAzAAAANwAAADsAAAA/AAAAAwBAAAIAAAAAAQAAEHBX5gR4RSYGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAIAAAABAMAAAUAAAAAAAAABAAAAAMDAAD1AQAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAoCBodAAAAAgAAAAABAAAQb6DYoIAAAAkAAAAAQEAADBENjJCNzdELUQ1RkItMzQzQy05NzYyLTg0NzdDQTFCQzk1QRgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAADMAAAA/v///wEAAAAAAAAAEAAAAAQQAACIAAAAAAAAAAUQAAAcAQAAAAAAABAQAABQAQAAAAAAAEAQAABAAQAAAAAAAAIgAAAcAgAAAAAAAAUgAACMAQAAAAAAABAgAACcAQAAAAAAABEgAADQAQAAAAAAABIgAACwAQAAAAAAABMgAADAAQAAAAAAACAgAAD8AQAAAAAAADAgAAAoAgAAAAAAAAHAAABwAQAAAAAAABHAAAAgAAAAAAAAABLAAACAAQAAAAAAABDQAAAEAAAAAAAAAA==</bookmark>
+        </asset>
+    </resources>
+    <library location="file:///Users/kevin/Movies/Kevin.fcpbundle/">
+        <event name="treasure-trimed Event" uid="7A9FF238-349D-4B45-BC12-4DFB9BC87747">
+            <project name="treasure-trimed Project" uid="A1409274-B5B3-4B99-ADCA-39AC09FC04ED" modDate="2019-07-03 13:45:07 +0800">
+                <sequence duration="16400/3000s" format="r1" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+                    <spine>
+                        <asset-clip name="中文 测试&quot;" offset="0s" ref="r2" duration="16400/3000s" audioRole="dialogue">
+                            <marker start="395519/240000s" duration="1/48000s" value="Marker 3"/>
+                            <marker start="1743283/720000s" duration="1/48000s" value="Marker 1"/>
+                            <marker start="141837/40000s" duration="1/48000s" value="Marker 2"/>
+                        </asset-clip>
+                    </spine>
+                </sequence>
+            </project>
+        </event>
+        <smart-collection name="项目" match="all">
+            <match-clip rule="is" type="project"/>
+        </smart-collection>
+        <smart-collection name="所有视频" match="any">
+            <match-media rule="is" type="videoOnly"/>
+            <match-media rule="is" type="videoWithAudio"/>
+        </smart-collection>
+        <smart-collection name="仅音频" match="all">
+            <match-media rule="is" type="audioOnly"/>
+        </smart-collection>
+        <smart-collection name="静止图像" match="all">
+            <match-media rule="is" type="stills"/>
+        </smart-collection>
+        <smart-collection name="个人收藏" match="all">
+            <match-ratings value="favorites"/>
+        </smart-collection>
+    </library>
+</fcpxml>
