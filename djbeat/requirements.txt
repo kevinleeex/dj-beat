@@ -4,4 +4,4 @@ tqdm==4.31.1
 madmom==0.16.1
 librosa==0.6.3
 pyfiglet==0.8.post1
-urllib3==1.23
+urllib3>=1.24.2
